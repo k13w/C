@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+
+int main()
+{	
+	int num1, num2, resultado;
+	char esc = '0';
+	printf("\t\t\tCaluladora By Heaven 2.0\n\n");
+	
+	printf("(1) Somar: \n");
+	printf("(2) Subtrair: \n");
+	printf("(3) Mutiplicar: \n");
+	printf("(4) Dividir: \n");
+	printf("\nEscolha a operacao: ");
+	esc = getchar();
+	
+	printf("\nDigite o 1 numero: ");
+	scanf("%i", &num1);
+	printf("\n");
+	printf("Digite o 2 numero: ");
+	scanf("%i", &num2);
+
+	
+	if(esc=='1'){
+		resultado = num1 + num2;
+	}else{
+	if(esc=='2'){
+		resultado = num1 - num2;
+	}else{
+	if(esc=='3'){
+		resultado = num1 * num2;
+	}else{
+	if(esc=='4'){
+		resultado = num1 / num2;
+			}	
+		}
+	}
+}
+
+	printf("\nO resultado e: %i\n\n", resultado);
+	system("pause");
+	return 0;
+}
