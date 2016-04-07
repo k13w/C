@@ -1,16 +1,22 @@
 ------------------------------------
-[Iniciando na C.I.A] - WEB 30 Pontos
+[Restrict acess] - WEB 50 Pontos
 ------------------------------------
 
-> Faz algum tempo que Edward Snowden vazou documentos sigilosos, desde então começamos a verificar sistemas vulneráveis! você assume agora o cargo de Analista de segurança segue o link para o primeiro serviço! Nessa primeira etapa irá reportar a John Brennan diretamenta!
+> Aqui na agência os novatos se deparam com sistemas antigos com pouca ou quase nenhuma documentação! Esse sistema da acesso ao acervo de operações da Segunda Guerra Mundial! Cada PIN digitado gera uma contra-senha! apenas a flag é a correta!
 
-> wwww.cybercommand.gov
+> admin.secondwar.gov
 
-Essa tarefa teria que entrar no painel do cybercommand.gov,logo iniciando o inspecionar elemento poderia ver seis scripts javascript cada um tem um username e password,O ultimo era o certo!,logando no painel descendo lá pro final teria uma parte em branco que não estava com "||||||||||||||||||||||||||||||||||"
-Selecionando essa parte estaria a flag!
-SHC{JavaScriptDefense}
+Essa tarefa teria que entrar no painel do admin.secondwar.gov usando um PIN,se você colocasse qualquer pin ele retornava na url o pin em Hexadecimal ou seja era via GET!.
 
+![img1](Pin.png)
 
-![img1](hvn.png)
+Um PIN geralmente é composto por 3 digitos,Fiz um brute force em python via GET em Hexadecimal que ia de 0 a 999.
+
+![img1](Python.png)
+
+Esse script quando achar o PIN ele retornava a source da pagina e lá embaixo estaria a Flag! o PIN era 761
+SHC{BrutesRandomFalse}
+
+![img1](Flag.png)
 
 Heaven -- BigBangTeam
